@@ -1,0 +1,54 @@
+
+<!-- Nav Bar End -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <!-- Container wrapper -->
+  <div class="container-fluid">
+    <!-- Toggle button -->
+    <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" >
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Collapsible wrapper -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <!-- Navbar brand -->
+      <a class="navbar-brand mt-2 mt-lg-0" href="#">
+        <img src="./../assets/images/home1.jpg" height="40" alt="SFH Logo" loading="lazy"/>
+      </a>
+      <!-- Left links -->
+      <div class="navbar-nav mr-auto">
+        <a routerLink="" class="nav-item nav-link active">Home</a>
+        <a routerLink="products" class="nav-item nav-link active">Products</a>
+        <a routerLink="/admin" class="nav-item nav-link active"  *ngIf="admin">Admin Controls</a>
+        <a routerLink="/track" class="nav-item nav-link active" *ngIf="!admin">My Order</a>
+      </div>
+      <!-- Left links -->
+    </div>
+    <!-- Collapsible wrapper -->
+
+    <!-- Right elements -->
+    <div class="d-flex align-items-center">
+      <!-- Icon -->
+      <a routerLink="viewwishlist" class="btn wishlist">
+        <i class="fa fa-heart"></i>
+      </a>
+      <a routerLink="viewcart" class="btn cart">
+        <i class="fa fa-shopping-cart"></i>
+      </a>
+      <!-- Avatar -->
+      <div class="navbar-nav ml-auto">
+        <div class="dropdown">
+          
+            <li>
+              <a *ngIf="!loggedin" routerLink="login" class="dropdown-item cursor-pointer">LogIn</a>
+            </li>
+            <li>
+              <a *ngIf="loggedin" (click)="LogOut()" class="dropdown-item cursor-pointer">LogOut</a>
+            </li>
+          
+        </div>
+      </div>
+    </div>
+    <!-- Right elements -->
+  </div>
+  <!-- Container wrapper -->
+</nav>
