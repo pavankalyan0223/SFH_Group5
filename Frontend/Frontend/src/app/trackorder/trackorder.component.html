@@ -1,0 +1,24 @@
+
+<table class="container my-3 table ">
+    <thead>
+      <tr>
+   
+        <th scope="col">Product name</th>
+        <th scope="col">Product Price</th>
+        <th scope="col">Product Quantity</th>
+        <th scope="col">Ordered Date</th>
+        <th scope="col">Estimated Delivery Date</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let s of sales ">
+      <tr>
+       
+        <td>{{s.product_name}}</td>
+        <td>{{s.product_price}}</td>
+        <td>{{s.quantity}}</td>
+        <td>{{s.date}}</td>
+        <td>14 Days</td>
+      </tr>
+    </tbody>
+
+  </table>
